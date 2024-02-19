@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="get" class="wrapper">
+
+        
+
+        <div class="div">
+
+        <div class="header">sign up here!</div>
+        <div class="form-row">
+            <label for="full-name">username: </label>
+            <input type="text" name="full-name" id="full-name">
+        </div>
+        <div class="form-row">
+            <label for="user-email">email:</label>
+            <input type="email" name="user-email" id="user-email" placeholder="user@example.com">
+        </div>
+        <div class="form-row">
+            <label for="phone-number">phone: </label>
+            <span>enter a 10 digit phone number</span> 
+            <input type="tel" onInput="this.value = phoneFormat(this.value)" name="phone-number" id="phone-number"  pattern="[0-9]{10}" title="Please enter a valid phone number, separated by dashes.">
+
+           
+        </div>
+        <div class="form-row">
+            <label for="password">pass:</label>
+            <span>8 character minimum</span> 
+            <input type="password" name="password" id="password" title="Please enter a valid password" minlength="8" onkeyup='check();' >
+        </div>
+        <div class="form-row">
+            <label for="password">confirm pass:</label>
+            <input type="password" name="password" id="confirmPassword" onkeyup='check();' >
+            <span id="cMessage" style="color:transparent;">password check</span>
+        </div>
+
+        <div class="form-row">
+            <button type="submit">Create Account</button>
+        </div>
+
+        <div class="form-row" id="blurb">
+            already a member? <a href="#">log in</a>
+        </div>
+
+
+
+        </div>
+    </form>
+    
+</body>
+</html>
+<script src="script.js"></script>
+
+
+
